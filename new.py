@@ -404,3 +404,12 @@ def print_times(name , n=2 ): # default n value
     print(name)
 
 # print_times('sina')
+# print('sina' , end = '***')
+
+def tavan(n , t):
+  javab = n
+  for i in range(t):
+    javab *= n
+  return javab
+
+# print(tavan(2,5))
