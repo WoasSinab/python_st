@@ -419,7 +419,7 @@ def tavan(n , t):
 
 def is_even(n):
   
-  return (n % 2 == 0)
+  return n % 2 == 0
 
 # print(is_even(43))
 
@@ -445,4 +445,15 @@ def largest(nums):
 
 my_numbers = [1,2,3,6,12,8,63,22,54,255]
 lg_number = largest(my_numbers)
-print(lg_number)
+# print(lg_number)
+
+
+def num_of_odd(nums):
+  gopsfand = []
+  for khar in nums:
+    if not is_even(khar):
+      gopsfand.append(khar)
+  return gopsfand
+
+my_odd = num_of_odd(my_numbers)
+print(my_odd)
