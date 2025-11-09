@@ -407,6 +407,7 @@ def print_times(name , n=2 ): # default n value
 # print('sina' , end = '***')
 
 def tavan(n , t):
+  
   javab = n
   for i in range(t):
     javab *= n
@@ -414,4 +415,22 @@ def tavan(n , t):
 
 # print(tavan(2,5))
 
+
+
+def is_even(n):
+  
+  return (n % 2 == 0)
+
+print(is_even(43))
+
+
+def num_of_even(nums):
+  count = 0
+  for n in nums:
+    if is_even(n):
+      count += 1
+  return count
+    
+
+print( num_of_even([1,2,3,4,5,6,7,8]) )
 
