@@ -421,7 +421,7 @@ def is_even(n):
   
   return (n % 2 == 0)
 
-print(is_even(43))
+# print(is_even(43))
 
 
 def num_of_even(nums):
@@ -429,8 +429,20 @@ def num_of_even(nums):
   for n in nums:
     if is_even(n):
       count += 1
-  return count
+  any_even = count >= 1
+  return any_even
     
 
-print( num_of_even([1,2,3,4,5,6,7,8]) )
+# print( num_of_even([1,3,5,7]))
 
+
+def largest(nums):
+  largest_n = -1
+  for i in nums:
+    if largest_n < i:
+      largest_n = i
+  return largest_n
+
+my_numbers = [1,2,3,6,12,8,63,22,54,255]
+lg_number = largest(my_numbers)
+print(lg_number)
