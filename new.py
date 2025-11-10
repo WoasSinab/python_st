@@ -449,11 +449,18 @@ lg_number = largest(my_numbers)
 
 
 def num_of_odd(nums):
+  count = 0
   gopsfand = []
   for khar in nums:
     if not is_even(khar):
       gopsfand.append(khar)
-  return gopsfand
+      count += 1
+  return gopsfand , count
 
-my_odd = num_of_odd(my_numbers)
-print(my_odd)
+my_odd , odd_count = num_of_odd(my_numbers)
+print(my_odd , odd_count , sep=' | ')
+
+
+
+
+
