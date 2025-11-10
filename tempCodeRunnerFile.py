@@ -1,1 +1,2 @@
-breakfast
+def print():
+  print('hello world!')

@@ -501,6 +501,10 @@ avg, total, max_user = user_donation(donation)
 # print(f"average donation: {avg}")
 # print(f"thanks to {max_user}")
 
+# end jadi
+
+
+# start usb 
 
 menu = {
   "breakfast": "cheese",
@@ -559,13 +563,88 @@ def printscope():
 scope = None
 set_global_scope()
 set_scope()
-printscope()
+# printscope()
 
 
 def f(a):
   a = a * a
-  print(a)
+  # print(a)
   
 b = 3
 f(b)
-print(b)
+# print(b)
+
+def f(a):
+  a += ' world'
+  # print(a)
+
+b = 'hello'
+f(b)
+# print(b)
+
+
+def f(a):
+  a[0] = 3
+  # print(a)
+  
+b = [1,2]
+f(b)
+# print(b)
+
+# end usb
+
+
+# start jadi 
+def guess_game():
+  import random
+  
+  computer_rendom = random.randint(1 , 20)
+  guess = 0
+  count = 0
+  
+  # print(computer_rendom)
+  
+  def welcome():
+    print("welcome to this funny game")
+    print("I will guess a number between 1 to 100")
+    print("you have to guess it...")
+    print("GO GO GO")
+    print()
+  
+  def finish(number , count):
+    print("Gg boy :)")
+    print(f"my number was {number} and you founded it in {count} guesses!")
+
+  def win(computer_rendom , guess):
+    if computer_rendom == guess:
+      return True
+    else:
+      return False
+
+  def answer(computer_rendom , user):
+  
+    if computer_rendom > user:
+      return 'my number is larger'
+    elif computer_rendom < user:
+      return 'ohh.. you went so large!mine is smaller'
+    
+    return 'wow! you won! good guess!'
+  
+  
+  def get_a_guess():
+    ans = input("what is your guess? ")
+    return int(ans)
+
+    
+  while (not win(computer_rendom , guess)):
+  
+      guess = get_a_guess()
+      count += 1
+      print(answer(computer_rendom,guess))
+  
+  finish(computer_rendom , count)
+  
+guess_game()
+  
+def print():
+  print('hello world!')
