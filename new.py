@@ -495,6 +495,8 @@ def user_donation(don):
 
 
 avg, total , max_user = user_donation(donation)
-print(f"total donation: {total}")
-print(f"average donation: {avg}")
-print(f"thanks to {max_user}")
+# print(f"total donation: {total}")
+# print(f"average donation: {avg}")
+# print(f"thanks to {max_user}")
+
+
