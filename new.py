@@ -717,3 +717,13 @@ def pick_evens(*args) :
 # print(pick_evens(2,3,13,45,67))
 
 
+def skyline(*args):
+  max_sky = 0
+  for i in args:
+    if i > max_sky:
+      max_sky = i
+  return max_sky
+
+# print(skyline(230,440,456,900,1290,1234,4312,1243,5467,1243,3212,4312,2345))
+
+
