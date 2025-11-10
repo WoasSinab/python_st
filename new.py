@@ -461,6 +461,40 @@ my_odd , odd_count = num_of_odd(my_numbers)
 print(my_odd , odd_count , sep=' | ')
 
 
+def jam_zarb(a , b):
+  jam = a + b
+  zarb = a * b
+  return jam , zarb
+
+print(jam_zarb(2 , 3))
+
+donation = {
+  'jadi': 20,
+  'sara': 800,
+  'zar' : 12,
+  'hasan': 9
+}
+
+def user_donation(don):
+  person = ''
+  total = 0
+  count = 0
+  
+  first_val = list(don.values()) [0]
+  max_dona = first_val
+  # print(max_dona)
+  
+  for name , value in don.items():
+    total += value
+    count += 1
+    if value > max_dona:
+      person = name
+      max_dona = value
+  average = total / count
+  return average , total , person
 
 
-
+avg, total , max_user = user_donation(donation)
+print(f"total donation: {total}")
+print(f"average donation: {avg}")
+print(f"thanks to {max_user}")
