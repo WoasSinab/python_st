@@ -458,7 +458,7 @@ def num_of_odd(nums):
   return gopsfand , count
 
 my_odd , odd_count = num_of_odd(my_numbers)
-print(my_odd , odd_count , sep=' | ')
+# print(my_odd , odd_count , sep=' | ')
 
 
 def jam_zarb(a , b):
@@ -466,7 +466,7 @@ def jam_zarb(a , b):
   zarb = a * b
   return jam , zarb
 
-print(jam_zarb(2 , 3))
+# print(jam_zarb(2 , 3))
 
 donation = {
   'jadi': 20,
@@ -476,6 +476,7 @@ donation = {
 }
 
 def user_donation(don):
+  
   person = ''
   total = 0
   count = 0
@@ -494,9 +495,77 @@ def user_donation(don):
   return average , total , person
 
 
-avg, total , max_user = user_donation(donation)
+avg, total, max_user = user_donation(donation)
+
 # print(f"total donation: {total}")
 # print(f"average donation: {avg}")
 # print(f"thanks to {max_user}")
 
 
+menu = {
+  "breakfast": "cheese",
+  "lunch2": "koobideh",
+  "dinner":"gheymeh",
+  "lunch": "joojeh"
+}
+
+# print(menu.items())
+
+def menu_key(dict , key):
+  
+  for i in dict.keys():
+    
+    if i == key:
+      return ( dict.get(key) )
+    
+menu_key(menu , "lunch2")
+
+
+def f(a,b,c):
+  return(f"a = {a} | b = {b} | c = {c}")
+  
+f(b=1,a=2,c=3)
+
+
+my_list = [1,'hi',3]
+f(*my_list)
+
+
+b = {'a':1, 'b':2 , 'c':3}
+f(**b)
+
+
+my_list2 = [21,15,36,18,27]
+
+def set_name():
+  global scope
+  scope = 'local'
+  
+set_name()
+# print(scope)
+
+
+def set_global_scope():
+  global scope
+  scope = 'global'
+  
+def set_scope():
+  scope = 'local'
+  
+def printscope():
+  print(scope)
+  
+
+scope = None
+set_global_scope()
+set_scope()
+printscope()
+
+
+def f(a):
+  a = a * a
+  print(a)
+  
+b = 3
+f(b)
+print(b)
