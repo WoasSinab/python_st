@@ -707,3 +707,13 @@ def masahat(**kwargs):
 
 
 
+def pick_evens(*args) :
+  evens = []
+  for i in args:
+    if i % 2 == 0:
+      evens.append(i)
+  return evens
+
+# print(pick_evens(2,3,13,45,67))
+
+
