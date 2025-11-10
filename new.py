@@ -644,7 +644,42 @@ def guess_game():
   
   finish(computer_rendom , count)
   
-guess_game()
+# guess_game()
   
-def print():
-  print('hello world!')
+def hello_name(name):
+  print(f"hello, {name}")
+  
+# hello_name('sina')
+
+def is_postivie(number):
+  
+  if number >= 0:
+    return True
+  else:
+    return False
+
+# print(is_postivie(-9))
+
+
+def sum_of_suares(n1 , n2):
+  return n1**2 + n2**2
+
+# print(sum_of_suares(3,4))
+
+def is_even(numb):
+  if numb% 2 == 0:
+    return True
+  else:
+    return False
+
+# print(is_even(6))
+
+
+def is_greater(a,b):
+  if a > b :
+    return True
+  else:
+    return False
+  
+# print(is_greater(4,9))
+
