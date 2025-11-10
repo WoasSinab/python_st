@@ -667,7 +667,7 @@ def sum_of_suares(n1 , n2):
 # print(sum_of_suares(3,4))
 
 def is_even(numb):
-  if numb% 2 == 0:
+  if numb % 2 == 0:
     return True
   else:
     return False
@@ -682,4 +682,28 @@ def is_greater(a,b):
     return False
   
 # print(is_greater(4,9))
+
+
+def zarb(*args):
+  res = 1
+  for i in args:
+    res *= i
+  return res
+
+# print(zarb(3,4,5,6,7,8))
+
+
+
+def masahat(**kwargs):
+  if 'tool' in kwargs:
+    return kwargs['tool'] * kwargs['ertefa']
+  if 'shoa' in kwargs:
+    return kwargs['shoa'] * 3.14 * kwargs['shoa']
+  return 100
+  
+
+# print(masahat(shoa=8))
+
+
+
 
