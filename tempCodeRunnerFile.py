@@ -1,2 +1,2 @@
-def print():
-  print('hello world!')
+  global userDic
+  userDic = {}

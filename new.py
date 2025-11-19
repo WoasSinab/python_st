@@ -731,3 +731,127 @@ def skyline(*args):
 
 # Train Two
 
+# def main():
+  
+#   while 1:
+#     print("Welcome to Twitter Company")
+#     print('1- Add User')
+#     print('2- Search by id')
+#     print('3- edit usrt')
+#     print('4- delete user')
+#     print('5- salary checker')
+#     print('6- Total Salary')
+#     print('7- Filter and sort data')
+#     print('8- undo removes')
+    
+#   x = eval(input("enter your choise: "))
+  
+#   if x == 1:
+#     add_user()
+    
+#   elif x == 2:
+#     show_user()
+    
+#   def load_data():
+    
+#     perso_data = 'perso_data.txt'
+#     userDic = {}
+#     trash = []
+    
+#     with open(perso_data, 'r', encoding='utf-8') as file:
+#       for i in perso_data:
+#         data = i.strip().split()
+        
+      
+  
+#   def add_user():
+    
+#     while 1:
+      
+#       user_id = eval(input("Enter user id: "))
+      
+#       if user_id == -1:
+#         print("exit... your information was saved.")
+#         break
+        
+#       user_name = input("Enter user name: ")
+#       user_totalTime = eval(input("Enter user Total Time of Work: "))
+#       user_HourCash = eval(input("Enter user Cash per hour works: "))
+      
+#       userDic[user_id] = {
+#         "id" : user_id,
+#         "name" : user_name,
+#         "total_Time" : user_totalTime,
+#         "hour_cash" : user_HourCash
+#       }
+      
+#       FileFormat = f"ID: {user_id} | Name: {user_name} | Total time works: {user_totalTime} | Cash per hours : {user_HourCash}\n"
+      
+#       with open (perso_data , 'a' , encoding='utf_8') as file:
+#         file.write(FileFormat)
+  
+#   def show_user():
+  
+#     search_id = eval(input("Enter id to search: "))
+    
+#     for search_id in userDic:
+#       target_data = userDic[search_id]
+      
+#       print (f"name : {target_data["name"]} |")
+      
+#     else:
+#       print("user not found !!!!")
+  
+
+# main()
+
+class personal:
+  def __init__(self, name , grade , color):
+    self.name = 'sina',
+    self.grade = 12,
+    self.color = 'black'
+    
+    
+    
+# ی متد بازشگتی بنویسید که تعداد کلمات داخل یک رشته برگردونه و قبلش رشته رو معکوس کنه
+# ابع بازگشتی که تعداد کلمات و برگدونه
+
+
+    
+# def reverb_str(string):
+#   text = 
+
+
+# def revers(name):
+#   if len(name) == 0:
+#     return False
+  
+#   else:
+#     return revers(name[1:]) + name[0]
+   
+
+# print(revers('emad'))
+
+def count_harf(name):
+  
+  count = 0
+  # name = name.strip()
+  
+  if name == "":
+    return 0
+  
+  if name == " ":
+    return 1
+  
+  # name_sp =name.find(" ")
+  
+  n = name.len()
+  
+  for i in n:
+    if i == " ":
+      count += 1
+      
+  
+  return count_harf 
+  
+print(count_harf("emad alww"))
