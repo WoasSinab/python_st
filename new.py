@@ -854,4 +854,19 @@ def count_harf(name):
   
   return count_harf 
   
-print(count_harf("emad alww"))
+# print(count_harf("emad alww"))
+
+
+#jadi oop
+
+class ClassName():
+  def __init__(self , name):
+    self.name= name
+    print(f"created user: {self.name}")
+  def say_hello(self):
+    print(f"hello {self.name}")
+    
+s = ClassName('sina')
+
+# s.say_hello()
+
