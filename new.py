@@ -862,11 +862,75 @@ def count_harf(name):
 class ClassName():
   def __init__(self , name):
     self.name= name
-    print(f"created user: {self.name}")
+    # print(f"created user: {self.name}")
   def say_hello(self):
     print(f"hello {self.name}")
     
 s = ClassName('sina')
 
 # s.say_hello()
+
+class circle():
+  pi = 3.1415926
+  def __init__(self , r):
+    self.r = r
+    
+  def masahat(self):
+    return self.r * self.r * self.pi
+
+
+c1 = circle(10)
+
+
+# print(c1.masahat())
+
+
+class book():
+  booktype = 'horror'
+  def __init__(self , name , page):
+    self.name = name
+    self.pages = page
+    
+    
+  def open(self):
+    print(f'opened the {self.name} which has {self.pages} pages')
+
+class darsi(book):
+  def __init__(self, reshteh , paye , name , page):
+    book.__init__(self , name , page)
+    # print('a new darsi book')
+    self.reshteh = reshteh
+    self.paye = paye
+    
+  def open(self):
+    print(f'opened the {self.name} which has {self.pages} pages in the {self.reshteh} reshteh and in paye {self.paye}')
+    
+d = darsi('riazi' , 3 , '300 noskhe' , 120)
+# print(d.open())
+
+
+
+#abstract oop
+class Human():
+  def __init__(self , name):
+    pass
+  
+  def jump(self):
+    raise NotImplementedError("ImplementJump Error")
+  
+class Programmer(Human):
+  
+  pass
+
+  def jump(self):
+    print("I Jumped ...")
+  
+Sina = Programmer("Sina")
+# print(Sina.jump())
+
+ 
+
+
+
+
 
