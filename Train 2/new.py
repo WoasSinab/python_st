@@ -894,6 +894,9 @@ class book():
     
   def open(self):
     print(f'opened the {self.name} which has {self.pages} pages')
+    
+  def __len__(self):
+    return self.pages
 
 class darsi(book):
   def __init__(self, reshteh , paye , name , page):
@@ -930,7 +933,19 @@ Sina = Programmer("Sina")
 
  
 
+b1 = book("shahnameh" , 120)
 
+# print(len(b1))
+
+class Car:
+  def __init__(self, brand):
+    self.brand = brand
+    
+  def __str__(self):
+    return f"Car Brand: {self.brand}"
+  
+my_car = Car("Toyota")
+print(my_car)
 
 
 
