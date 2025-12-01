@@ -945,7 +945,258 @@ class Car:
     return f"Car Brand: {self.brand}"
   
 my_car = Car("Toyota")
-print(my_car)
+# print(my_car)
 
 
 
+#packages 
+from ast import Import
+import random
+from turtle import back
+import emoji
+
+# print(emoji.emojize("Python is fun :red_heart:"))
+# print(emoji.emojize("I love coding :thumbs_up:"))
+# print(emoji.emojize("Let's grab some :pizza: and :sushi:!"))
+# print(emoji.emojize("Good morning! :sun_with_face:"))
+# print(emoji.emojize("Happy Birthday! :birthday_cake:"))
+
+
+
+#madule
+# import train2
+# print(train2.salary_total()) 
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname): 
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+    
+    
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+x = Student("Mike", "Olsen")
+# print(x.graduationyear)
+# x.welcome() 
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+# print(len(thisdict))
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.__age = age
+    
+  def getAge(self):
+    return self.__age
+
+p1 = Person("Emil", 25)
+# print(p1.name)
+# print(p1.getAge()) 
+
+
+import numpy as np
+
+import sys, time
+
+def typing(text): 
+    for character in text:
+      sys.stdout.write(character)
+      sys.stdout.flush()
+      time.sleep(0.1)
+
+# typing("bojd bojd bojd bojd az hame rang bojdeto ba chi mishoori ba shampoo bojdi...")
+  
+mypythonlist=[1,9,8,3,5,7,6,4,2,0]
+
+
+from colorama import Fore, Back, Style
+
+# print(Back.YELLOW + 'some red text')
+# print("Hello world!")
+
+
+from alive_progress import alive_bar
+import time
+import random
+
+# انیمیشن بار پیشرفت
+# with alive_bar(100) as bar:
+#     for i in range(100):
+#         time.sleep(0.03)
+#         bar()
+
+# print("Task completed!")
+
+# def matrix_rain():
+#     import os
+#     chars = "01アイウエオカキクケコサシスセソ"
+    
+#     for _ in range(50):
+#         os.system('cls')  # برای Windows
+#         for i in range(10):
+#             line = "".join(random.choice(chars) for _ in range(50))
+#             print(Fore.GREEN + line + Style.RESET_ALL)
+#         time.sleep(0.2)
+
+# matrix_rain()
+
+
+
+# ...existing code...
+
+import math, os, time
+from colorama import Fore, Style, init
+init()
+
+def proj(x,y,z,wd,ht,scale=20,dist=4):
+    f = scale / (z + dist)
+    cx = int(wd/2 + x * f)
+    cy = int(ht/2 - y * f)
+    return cx, cy
+
+def rot(px,py,pz,ax,ay,az):
+    # rotate X
+    y = py*math.cos(ax) - pz*math.sin(ax)
+    z = py*math.sin(ax) + pz*math.cos(ax)
+    x = px
+    # rotate Y
+    x2 = x*math.cos(ay) + z*math.sin(ay)
+    z2 = -x*math.sin(ay) + z*math.cos(ay)
+    y2 = y
+    # rotate Z
+    x3 = x2*math.cos(az) - y2*math.sin(az)
+    y3 = x2*math.sin(az) + y2*math.cos(az)
+    return x3, y3, z2
+
+verts = [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),
+         (-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]
+edges = [(0,1),(1,2),(2,3),(3,0),(4,5),(5,6),(6,7),(7,4),(0,4),(1,5),(2,6),(3,7)]
+
+def draw_cube():
+    try:
+        wd, ht = os.get_terminal_size()
+    except:
+        wd, ht = 80, 24
+    ax = ay = az = 0.0
+    try:
+        while True:
+            canvas = [[' ']*wd for _ in range(ht)]
+            for a,b in edges:
+                p1 = rot(*verts[a], ax, ay, az)
+                p2 = rot(*verts[b], ax, ay, az)
+                x1,y1 = proj(*p1, wd, ht)
+                x2,y2 = proj(*p2, wd, ht)
+                # Bresenham line
+                dx = abs(x2 - x1); sx = 1 if x1 < x2 else -1
+                dy = -abs(y2 - y1); sy = 1 if y1 < y2 else -1
+                err = dx + dy
+                cx, cy = x1, y1
+                while True:
+                    if 0 <= cy < ht and 0 <= cx < wd:
+                        canvas[cy][cx] = '█'
+                    if cx == x2 and cy == y2:
+                        break
+                    e2 = 2*err
+                    if e2 >= dy:
+                        err += dy; cx += sx
+                    if e2 <= dx:
+                        err += dx; cy += sy
+            os.system('cls')
+            print(Fore.GREEN, end='')
+            for row in canvas:
+                print(''.join(row))
+            print(Style.RESET_ALL, end='')
+            ax += 0.03; ay += 0.02; az += 0.04
+            time.sleep(0.03)
+    except KeyboardInterrupt:
+        pass
+
+if __name__ == "__main__":
+    draw_cube()
+
+
+import math, os, time
+from colorama import Fore, Style, init
+init()
+
+def proj(x,y,z,wd,ht,scale=20,dist=4):
+    f = scale / (z + dist)
+    cx = int(wd/2 + x * f)
+    cy = int(ht/2 - y * f)
+    return cx, cy
+
+def rot(px,py,pz,ax,ay,az):
+    # rotate X
+    y = py*math.cos(ax) - pz*math.sin(ax)
+    z = py*math.sin(ax) + pz*math.cos(ax)
+    x = px
+    # rotate Y
+    x2 = x*math.cos(ay) + z*math.sin(ay)
+    z2 = -x*math.sin(ay) + z*math.cos(ay)
+    y2 = y
+    # rotate Z
+    x3 = x2*math.cos(az) - y2*math.sin(az)
+    y3 = x2*math.sin(az) + y2*math.cos(az)
+    return x3, y3, z2
+
+verts = [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),
+         (-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]
+edges = [(0,1),(1,2),(2,3),(3,0),(4,5),(5,6),(6,7),(7,4),(0,4),(1,5),(2,6),(3,7)]
+
+def draw_cube():
+    try:
+        wd, ht = os.get_terminal_size()
+    except:
+        wd, ht = 80, 24
+    ax = ay = az = 0.0
+    try:
+        while True:
+            canvas = [[' ']*wd for _ in range(ht)]
+            for a,b in edges:
+                p1 = rot(*verts[a], ax, ay, az)
+                p2 = rot(*verts[b], ax, ay, az)
+                x1,y1 = proj(*p1, wd, ht)
+                x2,y2 = proj(*p2, wd, ht)
+                # Bresenham line
+                dx = abs(x2 - x1); sx = 1 if x1 < x2 else -1
+                dy = -abs(y2 - y1); sy = 1 if y1 < y2 else -1
+                err = dx + dy
+                cx, cy = x1, y1
+                while True:
+                    if 0 <= cy < ht and 0 <= cx < wd:
+                        canvas[cy][cx] = '█'
+                    if cx == x2 and cy == y2:
+                        break
+                    e2 = 2*err
+                    if e2 >= dy:
+                        err += dy; cx += sx
+                    if e2 <= dx:
+                        err += dx; cy += sy
+            os.system('cls')
+            print(Fore.GREEN, end='')
+            for row in canvas:
+                print(''.join(row))
+            print(Style.RESET_ALL, end='')
+            ax += 0.03; ay += 0.02; az += 0.04
+            time.sleep(0.03)
+    except KeyboardInterrupt:
+        pass
+
+if __name__ == "__main__":
+    draw_cube()
