@@ -1025,7 +1025,7 @@ def typing(text):
 mypythonlist=[1,9,8,3,5,7,6,4,2,0]
 
 
-from colorama import Fore, Back, Style
+# from colorama import Fore, Back, Style
 
 # print(Back.YELLOW + 'some red text')
 # print("Hello world!")
@@ -1046,7 +1046,73 @@ import random
 a = np.array([1, 2, 3, 4, 5, 6, 7, 8,9, 10, 11, 12])
 # print(a.shape) 
 
-reshaped = a.reshape(2,5)
+# reshaped = a.reshape(2,5)
 
-print(reshaped)
+# print(reshaped)
 
+
+# myPyList = [1,9,8,3]
+# a=np.array([1,2,3,4])
+
+a = np.array([[0,2,3] , [4,5,6] , [7,8,9]])
+
+# print(a[0][1])
+# print(a[0])
+# print(a[:2])
+# print(np.min(a))
+# print(np.max(a))
+# print(np.sum(a))
+# print(np.mean(a))
+# print(np.median(a))
+# print(a+10)
+
+c = [3.0,4.5,6.1]
+# print(a*c)
+
+# print(a.shape)
+# print(a.dtype)
+
+# print(a.ndim)
+# print(a.size)
+
+x=np.array([1,2,3,4],dtype=float)
+# print(x.dtype)
+
+# a=np.zeros((2,2),dtype=int)
+# print(a)
+
+# a=np.ones((2,2),dtype=int)
+# print(a)
+
+# a=np.empty((2,2))
+# print(a)
+
+e=np.array([[1,2,3,4],[5,6,7,8]])
+# print(e)
+# print(e.ndim)
+
+# print(e.reshape(2,2,2))
+
+# a=np.arange(1,3,0.5)
+# print(a)
+
+a=np.arange(15).reshape(3,5)
+# print(a)
+
+# a=a.flatten()
+# print(a)
+
+
+a=np.array([[1,2],[3,4]])
+b=np.array([[5,6],[7,8]])
+# print(np.vstack((a,b,a)))
+# print(a.ndim)
+# print(np.hstack((a,b,a)))
+
+c=[5,6]
+# print(np.column_stack((a,c)))
+
+a=np.array([[1,3,5,7,9,11],[2,4,6,8,10,12]])
+# print(a)
+# print(np.hsplit(a,2))
+# print(np.vsplit(a,2))
